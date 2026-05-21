@@ -1,0 +1,10 @@
+# C
+
+The C utility provides a minimal low-level CSV summary check.
+
+Run:
+
+```bash
+gcc c/developmental_systems_summary.c -o outputs/developmental_systems_summary_c
+./outputs/developmental_systems_summary_c data/developmental_systems_panel.csv
+```

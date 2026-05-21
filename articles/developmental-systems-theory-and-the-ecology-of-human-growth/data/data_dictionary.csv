@@ -1,0 +1,20 @@
+variable,type,description
+child_id,integer,Unique synthetic child identifier
+school_id,integer,Synthetic school identifier
+neighborhood_id,integer,Synthetic neighborhood identifier
+time,integer,Repeated developmental observation wave
+biological_sensitivity,numeric,Synthetic biological sensitivity or person-level responsiveness
+family_support,numeric,Baseline family support tendency
+peer_belonging,numeric,Baseline peer belonging tendency
+intervention_exposure,integer,Synthetic support or intervention exposure indicator
+school_climate,numeric,School-level climate
+curriculum_opportunity,numeric,School-level curriculum opportunity
+neighborhood_safety,numeric,Neighborhood-level safety
+service_access,numeric,Neighborhood/service ecology access
+material_security,numeric,Material security or contextual resource level
+current_family,numeric,Time-varying family support
+current_peer,numeric,Time-varying peer belonging
+ecological_support,numeric,Composite ecological support index
+ecological_stress,numeric,Time-varying ecological stress burden
+development_score,numeric,Synthetic developmental outcome
+ecological_support_profile,string,Profile grouping based on ecological support and stress
