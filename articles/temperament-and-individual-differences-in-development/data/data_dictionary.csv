@@ -1,0 +1,21 @@
+variable,type,description
+child_id,integer,Unique synthetic child identifier
+classroom_id,integer,Synthetic classroom identifier
+time,integer,Repeated developmental observation wave
+temperament_reactivity,numeric,Baseline temperamental reactivity
+inhibition,numeric,Baseline behavioral inhibition
+activity_level,numeric,Baseline activity level
+baseline_adjustment,numeric,Baseline socioemotional adjustment
+chronic_stress,integer,Binary chronic stress exposure indicator
+family_support,numeric,Baseline family support tendency
+school_fit,numeric,Baseline school fit tendency
+classroom_structure,numeric,Classroom structure and demand profile
+teacher_responsiveness,numeric,Classroom relational responsiveness
+movement_flexibility,numeric,Movement and sensory flexibility
+current_support,numeric,Time-varying caregiver support
+current_school_fit,numeric,Time-varying school fit
+acute_stress,numeric,Time-varying stress exposure
+current_accommodation,numeric,Time-varying accommodation or support
+goodness_of_fit,numeric,Synthetic child-environment fit index
+adjustment_score,numeric,Synthetic socioemotional adjustment outcome
+temperament_profile,string,Profile grouping based on reactivity and fit
