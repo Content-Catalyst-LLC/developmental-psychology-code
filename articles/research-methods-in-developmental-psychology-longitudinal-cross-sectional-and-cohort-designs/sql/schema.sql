@@ -1,23 +1,33 @@
--- Article-level synthetic developmental psychology schema.
+-- Schema for synthetic developmental research design panel data.
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+DROP TABLE IF EXISTS developmental_design_panel;
+
+CREATE TABLE developmental_design_panel (
+    person_id INTEGER NOT NULL,
+    context_id INTEGER NOT NULL,
+    birth_cohort INTEGER NOT NULL,
+    study_wave INTEGER NOT NULL,
+    period INTEGER NOT NULL,
+    age REAL NOT NULL,
+    baseline_trait REAL,
+    support REAL,
+    risk REAL,
+    context_quality REAL,
+    cohort_effect REAL,
+    period_effect REAL,
+    development_score REAL,
+    observed INTEGER,
+    PRIMARY KEY (person_id, study_wave)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
+CREATE INDEX idx_design_panel_context
+ON developmental_design_panel (context_id);
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
+CREATE INDEX idx_design_panel_cohort
+ON developmental_design_panel (birth_cohort);
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_design_panel_age
+ON developmental_design_panel (age);
+
+CREATE INDEX idx_design_panel_period
+ON developmental_design_panel (period);

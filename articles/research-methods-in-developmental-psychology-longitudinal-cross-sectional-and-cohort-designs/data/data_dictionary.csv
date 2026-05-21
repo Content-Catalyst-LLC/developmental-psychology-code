@@ -1,0 +1,15 @@
+variable,type,description
+person_id,integer,Unique synthetic participant identifier
+context_id,integer,Synthetic context identifier such as school neighborhood clinic or cohort site
+birth_cohort,integer,Synthetic cohort year or cohort label
+study_wave,integer,Repeated observation wave
+period,integer,Synthetic study period
+age,numeric,Participant age at observation
+baseline_trait,numeric,Person-level baseline developmental tendency
+support,numeric,Time-varying developmental support
+risk,numeric,Time-varying developmental risk exposure
+context_quality,numeric,Context-level developmental quality
+cohort_effect,numeric,Synthetic cohort-level influence
+period_effect,numeric,Synthetic period-level influence
+development_score,numeric,Synthetic developmental outcome
+observed,integer,Retention or observation indicator where 1 means observed and 0 means missing
