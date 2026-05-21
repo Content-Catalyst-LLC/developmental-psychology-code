@@ -1,0 +1,21 @@
+variable,type,description
+person_id,integer,Unique synthetic person identifier
+context_id,integer,Synthetic shared context identifier
+time,integer,Repeated observation wave
+baseline_resources,numeric,Person-level baseline resource tendency
+baseline_burden,numeric,Person-level baseline burden tendency
+support_buffer,numeric,Person-level support/buffering tendency
+baseline_health,numeric,Person-level baseline health condition
+community_opportunity,numeric,Context-level opportunity
+institutional_support,numeric,Context-level institutional support
+environmental_safety,numeric,Context-level environmental safety
+current_resources,numeric,Time-varying resources
+current_burden,numeric,Time-varying burden
+current_support,numeric,Time-varying support
+health_status,numeric,Time-varying health condition
+early_timing_weight,numeric,Weight for early exposure
+transition_weight,numeric,Weight for transition-period support
+cumulative_resources,numeric,Cumulative timing-weighted resources
+cumulative_burden,numeric,Cumulative timing-weighted burden
+development_score,numeric,Synthetic developmental outcome
+inequality_profile,string,Resource/burden profile classification

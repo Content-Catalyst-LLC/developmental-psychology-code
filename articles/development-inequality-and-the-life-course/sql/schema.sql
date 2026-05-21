@@ -1,23 +1,23 @@
--- Article-level synthetic developmental psychology schema.
+DROP TABLE IF EXISTS life_course_inequality_panel;
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+CREATE TABLE life_course_inequality_panel (
+    person_id INTEGER NOT NULL,
+    context_id INTEGER NOT NULL,
+    time INTEGER NOT NULL,
+    current_resources REAL,
+    current_burden REAL,
+    current_support REAL,
+    health_status REAL,
+    community_opportunity REAL,
+    institutional_support REAL,
+    environmental_safety REAL,
+    cumulative_resources REAL,
+    cumulative_burden REAL,
+    development_score REAL,
+    inequality_profile TEXT,
+    PRIMARY KEY (person_id, time)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_life_course_context ON life_course_inequality_panel (context_id);
+CREATE INDEX idx_life_course_time ON life_course_inequality_panel (time);
+CREATE INDEX idx_life_course_profile ON life_course_inequality_panel (inequality_profile);
