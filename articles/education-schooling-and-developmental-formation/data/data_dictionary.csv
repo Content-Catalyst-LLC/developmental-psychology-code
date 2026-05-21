@@ -1,0 +1,22 @@
+variable,type,description
+student_id,integer,Unique synthetic student identifier
+school_id,integer,Synthetic school identifier
+time,integer,Repeated developmental observation wave
+baseline_teacher_support,numeric,Baseline teacher support tendency
+baseline_peer_belonging,numeric,Baseline peer belonging tendency
+baseline_school_stress,numeric,Baseline school-related stress tendency
+family_support,numeric,Baseline family support tendency
+academic_confidence,numeric,Baseline academic confidence tendency
+intervention,integer,Synthetic support/intervention exposure indicator
+school_climate,numeric,School-level climate
+curriculum_opportunity,numeric,School-level curriculum opportunity
+restorative_practice,numeric,School-level restorative-practice orientation
+resource_capacity,numeric,School-level resource capacity
+current_teacher,numeric,Time-varying teacher support
+current_peer,numeric,Time-varying peer belonging
+current_stress,numeric,Time-varying school stress
+current_family,numeric,Time-varying family support
+current_confidence,numeric,Time-varying academic confidence
+connectedness_score,numeric,Synthetic school connectedness outcome
+development_score,numeric,Synthetic developmental outcome
+school_support_profile,string,Profile grouping based on average teacher support and peer belonging
