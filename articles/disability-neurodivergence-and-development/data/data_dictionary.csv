@@ -1,0 +1,21 @@
+variable,type,description
+child_id,integer,Unique synthetic child identifier
+setting_id,integer,Synthetic setting such as school clinic neighborhood or service ecology
+time,integer,Repeated developmental observation wave
+neuro_profile,numeric,Synthetic neurodevelopmental or disability-related profile
+support_quality,numeric,Baseline support quality tendency
+accessibility,numeric,Baseline accessibility or accommodation tendency
+barrier_burden,numeric,Baseline barrier burden tendency
+caregiver_advocacy,numeric,Baseline caregiver advocacy or navigation support
+communication_access,numeric,Baseline access to communication supports
+inclusion_climate,numeric,Setting-level inclusion climate
+service_access,numeric,Setting-level service access
+sensory_flexibility,numeric,Setting-level sensory flexibility
+current_support,numeric,Time-varying support quality
+current_access,numeric,Time-varying accessibility and accommodation
+current_barrier,numeric,Time-varying barrier burden
+current_communication,numeric,Time-varying communication access
+current_advocacy,numeric,Time-varying caregiver advocacy support
+participation_score,numeric,Synthetic participation outcome
+development_score,numeric,Synthetic developmental outcome
+access_condition,string,Profile grouping based on average access and barrier burden

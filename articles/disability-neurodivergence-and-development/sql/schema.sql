@@ -1,23 +1,29 @@
--- Article-level synthetic developmental psychology schema.
+DROP TABLE IF EXISTS disability_neurodivergence_panel;
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+CREATE TABLE disability_neurodivergence_panel (
+    child_id INTEGER NOT NULL,
+    setting_id INTEGER NOT NULL,
+    time INTEGER NOT NULL,
+    neuro_profile REAL,
+    support_quality REAL,
+    accessibility REAL,
+    barrier_burden REAL,
+    caregiver_advocacy REAL,
+    communication_access REAL,
+    inclusion_climate REAL,
+    service_access REAL,
+    sensory_flexibility REAL,
+    current_support REAL,
+    current_access REAL,
+    current_barrier REAL,
+    current_communication REAL,
+    current_advocacy REAL,
+    participation_score REAL,
+    development_score REAL,
+    access_condition TEXT,
+    PRIMARY KEY (child_id, time)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_accessibility_setting ON disability_neurodivergence_panel (setting_id);
+CREATE INDEX idx_accessibility_time ON disability_neurodivergence_panel (time);
+CREATE INDEX idx_accessibility_condition ON disability_neurodivergence_panel (access_condition);
