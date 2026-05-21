@@ -1,23 +1,27 @@
--- Article-level synthetic developmental psychology schema.
+DROP TABLE IF EXISTS nature_nurture_development_panel;
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+CREATE TABLE nature_nurture_development_panel (
+    child_id INTEGER NOT NULL,
+    school_id INTEGER NOT NULL,
+    time INTEGER NOT NULL,
+    biological_sensitivity REAL,
+    baseline_functioning REAL,
+    structural_risk INTEGER,
+    chronic_adversity INTEGER,
+    family_support_context REAL,
+    institutional_support REAL,
+    disability_support REAL,
+    resource_stability REAL,
+    caregiver_support REAL,
+    acute_stress REAL,
+    intervention INTEGER,
+    protective_context REAL,
+    development_score REAL,
+    sensitivity_profile TEXT,
+    PRIMARY KEY (child_id, time)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_nature_nurture_school ON nature_nurture_development_panel (school_id);
+CREATE INDEX idx_nature_nurture_time ON nature_nurture_development_panel (time);
+CREATE INDEX idx_nature_nurture_profile ON nature_nurture_development_panel (sensitivity_profile);
+CREATE INDEX idx_nature_nurture_risk ON nature_nurture_development_panel (structural_risk);

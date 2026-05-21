@@ -1,0 +1,18 @@
+variable,type,description
+child_id,integer,Unique synthetic child identifier
+school_id,integer,Synthetic school or institutional context identifier
+time,integer,Repeated developmental observation wave
+biological_sensitivity,numeric,Latent biological sensitivity or reactivity parameter
+baseline_functioning,numeric,Initial developmental functioning
+structural_risk,integer,Binary structural risk exposure indicator
+chronic_adversity,integer,Binary persistent adversity indicator
+family_support_context,numeric,Baseline family support tendency
+institutional_support,numeric,School or institutional support
+disability_support,numeric,Accessibility and disability-support context
+resource_stability,numeric,Material and institutional resource stability
+caregiver_support,numeric,Time-varying caregiver support
+acute_stress,numeric,Time-varying acute stress
+intervention,integer,Later intervention/support exposure
+protective_context,numeric,Composite protective context
+development_score,numeric,Synthetic developmental outcome
+sensitivity_profile,string,Profile grouping by sensitivity and protective context
