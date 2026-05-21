@@ -1,0 +1,23 @@
+variable,type,description
+child_id,integer,Unique synthetic child identifier
+context_id,integer,Synthetic school neighborhood clinic or service context
+time,integer,Repeated developmental observation wave
+bio_sensitivity,numeric,Synthetic biological sensitivity or susceptibility
+caregiving_quality,numeric,Baseline caregiving quality tendency
+environmental_stress,numeric,Baseline stress exposure tendency
+nutritional_support,numeric,Baseline nutritional support tendency
+early_exposure,integer,Synthetic early exposure indicator
+intervention_support,integer,Synthetic intervention or support exposure indicator
+school_support,numeric,Context-level school support
+neighborhood_safety,numeric,Context-level neighborhood safety
+service_access,numeric,Context-level service access
+timing_weight,numeric,Timing or sensitive-period exposure weight
+current_care,numeric,Time-varying caregiving quality
+current_stress,numeric,Time-varying stress exposure
+current_nutrition,numeric,Time-varying nutritional support
+weighted_stress,numeric,Timing-weighted stress exposure
+weighted_support,numeric,Timing-weighted support exposure
+embedded_stress,numeric,Cumulative timing-weighted stress exposure
+embedded_support,numeric,Cumulative timing-weighted support exposure
+development_score,numeric,Synthetic developmental outcome
+sensitivity_stress_profile,string,Profile grouping based on biological sensitivity and stress
