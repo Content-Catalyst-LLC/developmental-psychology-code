@@ -1,0 +1,22 @@
+variable,type,description
+year,integer,Calendar year
+child_study,numeric,Synthetic relative prominence of child-study traditions
+maturational,numeric,Synthetic relative prominence of maturational theory
+psychoanalytic,numeric,Synthetic relative prominence of psychoanalytic developmental theory
+behaviorist,numeric,Synthetic relative prominence of behaviorism/learning theory
+cognitive_developmental,numeric,Synthetic relative prominence of cognitive developmental theory
+sociocultural,numeric,Synthetic relative prominence of sociocultural theory
+attachment_social,numeric,Synthetic relative prominence of attachment and social development
+ecological,numeric,Synthetic relative prominence of ecological systems approaches
+lifespan,numeric,Synthetic relative prominence of lifespan developmental psychology
+developmental_psychopathology,numeric,Synthetic relative prominence of developmental psychopathology
+neuroscience_genetics,numeric,Synthetic relative prominence of neuroscience/genetics
+developmental_systems,numeric,Synthetic relative prominence of developmental systems thinking
+institutional_support,numeric,Synthetic index of journals/societies/funding/training support
+methodological_advantage,numeric,Synthetic index of methodological capacity
+social_relevance,numeric,Synthetic index of public/policy/social relevance
+critique_index,numeric,Synthetic index of critique and conceptual challenge
+child_centered_index,numeric,Synthetic attention to child-centered models
+lifespan_index,numeric,Synthetic attention to adulthood and aging
+ecological_systems_index,numeric,Synthetic ecological and systems orientation
+broadening_index,numeric,Synthetic index of broadening beyond early child-centered paradigms

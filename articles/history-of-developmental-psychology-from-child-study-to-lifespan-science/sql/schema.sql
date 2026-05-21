@@ -1,23 +1,29 @@
--- Article-level synthetic developmental psychology schema.
+DROP TABLE IF EXISTS developmental_psychology_history_panel;
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+CREATE TABLE developmental_psychology_history_panel (
+    year INTEGER PRIMARY KEY,
+    child_study REAL,
+    maturational REAL,
+    psychoanalytic REAL,
+    behaviorist REAL,
+    cognitive_developmental REAL,
+    sociocultural REAL,
+    attachment_social REAL,
+    ecological REAL,
+    lifespan REAL,
+    developmental_psychopathology REAL,
+    neuroscience_genetics REAL,
+    developmental_systems REAL,
+    institutional_support REAL,
+    methodological_advantage REAL,
+    social_relevance REAL,
+    critique_index REAL,
+    child_centered_index REAL,
+    lifespan_index REAL,
+    ecological_systems_index REAL,
+    broadening_index REAL
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_devhist_year ON developmental_psychology_history_panel (year);
+CREATE INDEX idx_devhist_broadening ON developmental_psychology_history_panel (broadening_index);
+CREATE INDEX idx_devhist_lifespan ON developmental_psychology_history_panel (lifespan_index);
