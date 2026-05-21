@@ -1,0 +1,24 @@
+variable,type,description
+adolescent_id,integer,Unique synthetic adolescent identifier
+school_id,integer,Synthetic school/institution identifier
+time,integer,Repeated observation wave
+baseline_identity,numeric,Initial synthetic identity coherence
+peer_support_base,numeric,Baseline peer-support tendency
+family_support_base,numeric,Baseline family-support tendency
+school_connectedness_base,numeric,Baseline school-connectedness tendency
+future_orientation_base,numeric,Baseline future-orientation tendency
+chronic_exclusion,integer,Binary chronic exclusion indicator
+school_climate,numeric,School-level climate
+counseling_access,numeric,School-level counseling/support access
+extracurricular_access,numeric,School-level participation access
+identity_safety,numeric,School-level identity dignity and safety
+digital_safety,numeric,Digital safety/support climate
+current_peer_support,numeric,Time-varying peer support
+current_family_support,numeric,Time-varying family support
+current_connectedness,numeric,Time-varying school connectedness
+current_future_orientation,numeric,Time-varying future orientation
+current_exclusion,numeric,Time-varying exclusion/stigma
+digital_stress,numeric,Time-varying digital visibility/comparison stress
+support_context,numeric,Composite support context
+identity_score,numeric,Synthetic identity-coherence outcome
+identity_profile,string,Profile by exclusion and support context

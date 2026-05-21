@@ -1,23 +1,33 @@
--- Article-level synthetic developmental psychology schema.
+DROP TABLE IF EXISTS adolescence_identity_panel;
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+CREATE TABLE adolescence_identity_panel (
+    adolescent_id INTEGER NOT NULL,
+    school_id INTEGER NOT NULL,
+    time INTEGER NOT NULL,
+    baseline_identity REAL,
+    peer_support_base REAL,
+    family_support_base REAL,
+    school_connectedness_base REAL,
+    future_orientation_base REAL,
+    chronic_exclusion INTEGER,
+    school_climate REAL,
+    counseling_access REAL,
+    extracurricular_access REAL,
+    identity_safety REAL,
+    digital_safety REAL,
+    current_peer_support REAL,
+    current_family_support REAL,
+    current_connectedness REAL,
+    current_future_orientation REAL,
+    current_exclusion REAL,
+    digital_stress REAL,
+    support_context REAL,
+    identity_score REAL,
+    identity_profile TEXT,
+    PRIMARY KEY (adolescent_id, time)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_adolescence_school ON adolescence_identity_panel (school_id);
+CREATE INDEX idx_adolescence_time ON adolescence_identity_panel (time);
+CREATE INDEX idx_adolescence_profile ON adolescence_identity_panel (identity_profile);
+CREATE INDEX idx_adolescence_exclusion ON adolescence_identity_panel (chronic_exclusion);
