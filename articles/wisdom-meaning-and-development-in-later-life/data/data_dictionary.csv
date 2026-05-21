@@ -1,0 +1,21 @@
+variable,type,description
+id,integer,Unique synthetic older-adult identifier
+care_context_id,integer,Synthetic care/community context identifier
+time,integer,Repeated later-life observation wave
+baseline_meaning,numeric,Baseline meaning orientation
+social_connection,numeric,Baseline social connection tendency
+reflective_integration,numeric,Baseline reflective or narrative integration tendency
+health_burden,numeric,Baseline health burden tendency
+adaptive_support,numeric,Baseline adaptive support tendency
+legacy_orientation,numeric,Baseline legacy or generativity orientation
+dignity_support,numeric,Care-context dignity support
+service_access,numeric,Care-context service access
+community_participation,numeric,Care-context community participation
+current_connection,numeric,Time-varying social connection
+current_reflection,numeric,Time-varying reflective integration
+current_health,numeric,Time-varying health burden
+current_support,numeric,Time-varying adaptive support
+current_legacy,numeric,Time-varying legacy orientation
+wisdom_index,numeric,Synthetic wisdom index
+meaning_score,numeric,Synthetic later-life meaning outcome
+meaning_profile,string,Profile grouping based on connection and health burden

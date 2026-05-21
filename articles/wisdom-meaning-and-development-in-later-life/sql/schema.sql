@@ -1,23 +1,29 @@
--- Article-level synthetic developmental psychology schema.
+DROP TABLE IF EXISTS wisdom_meaning_later_life_panel;
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+CREATE TABLE wisdom_meaning_later_life_panel (
+    id INTEGER NOT NULL,
+    care_context_id INTEGER NOT NULL,
+    time INTEGER NOT NULL,
+    baseline_meaning REAL,
+    social_connection REAL,
+    reflective_integration REAL,
+    health_burden REAL,
+    adaptive_support REAL,
+    legacy_orientation REAL,
+    dignity_support REAL,
+    service_access REAL,
+    community_participation REAL,
+    current_connection REAL,
+    current_reflection REAL,
+    current_health REAL,
+    current_support REAL,
+    current_legacy REAL,
+    wisdom_index REAL,
+    meaning_score REAL,
+    meaning_profile TEXT,
+    PRIMARY KEY (id, time)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_wisdom_context ON wisdom_meaning_later_life_panel (care_context_id);
+CREATE INDEX idx_wisdom_time ON wisdom_meaning_later_life_panel (time);
+CREATE INDEX idx_wisdom_profile ON wisdom_meaning_later_life_panel (meaning_profile);
