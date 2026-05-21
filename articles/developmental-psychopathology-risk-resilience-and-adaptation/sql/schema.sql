@@ -1,23 +1,34 @@
--- Article-level synthetic developmental psychology schema.
+DROP TABLE IF EXISTS developmental_psychopathology_panel;
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
+CREATE TABLE developmental_psychopathology_panel (
+    child_id INTEGER NOT NULL,
+    context_id INTEGER NOT NULL,
+    time INTEGER NOT NULL,
+    baseline_regulation REAL,
+    protective_support REAL,
+    accumulated_risk REAL,
+    caregiver_stability REAL,
+    biological_sensitivity REAL,
+    community_support REAL,
+    school_belonging REAL,
+    service_access REAL,
+    current_regulation REAL,
+    current_support REAL,
+    current_risk REAL,
+    current_stability REAL,
+    timing_weight REAL,
+    transition_weight REAL,
+    weighted_risk REAL,
+    transition_support REAL,
     cumulative_risk REAL,
-    developmental_functioning REAL
+    cumulative_support REAL,
+    adaptation_score REAL,
+    internalizing_score REAL,
+    externalizing_score REAL,
+    risk_support_profile TEXT,
+    PRIMARY KEY (child_id, time)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_psychopathology_context ON developmental_psychopathology_panel (context_id);
+CREATE INDEX idx_psychopathology_time ON developmental_psychopathology_panel (time);
+CREATE INDEX idx_psychopathology_profile ON developmental_psychopathology_panel (risk_support_profile);

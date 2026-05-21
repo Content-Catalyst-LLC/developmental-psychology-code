@@ -1,0 +1,26 @@
+variable,type,description
+child_id,integer,Unique synthetic child identifier
+context_id,integer,Synthetic developmental context such as school neighborhood clinic or family-service ecology
+time,integer,Repeated developmental observation wave
+baseline_regulation,numeric,Baseline regulation tendency
+protective_support,numeric,Baseline protective support tendency
+accumulated_risk,numeric,Baseline risk tendency
+caregiver_stability,numeric,Baseline caregiver or relational stability tendency
+biological_sensitivity,numeric,Synthetic sensitivity or responsiveness tendency
+community_support,numeric,Context-level community support
+school_belonging,numeric,Context-level school belonging and inclusion
+service_access,numeric,Context-level access to services and care
+current_regulation,numeric,Time-varying regulation
+current_support,numeric,Time-varying support
+current_risk,numeric,Time-varying risk or adversity
+current_stability,numeric,Time-varying caregiver or relational stability
+timing_weight,numeric,Timing weight for risk exposure
+transition_weight,numeric,Timing weight for transition or recovery opportunity
+weighted_risk,numeric,Current risk multiplied by timing weight
+transition_support,numeric,Current support multiplied by transition weight
+cumulative_risk,numeric,Cumulative timing-weighted risk
+cumulative_support,numeric,Cumulative support exposure
+adaptation_score,numeric,Synthetic adaptation outcome
+internalizing_score,numeric,Synthetic internalizing pathway outcome
+externalizing_score,numeric,Synthetic externalizing pathway outcome
+risk_support_profile,string,Profile grouping based on average risk and support
