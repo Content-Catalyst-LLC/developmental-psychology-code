@@ -1,0 +1,17 @@
+variable,type,description
+case_id,integer,Unique synthetic prenatal case identifier
+neighborhood_context,integer,Synthetic neighborhood or health-system context identifier
+gestational_weeks,numeric,Gestational timing or developmental maturity
+maternal_health,numeric,Synthetic maternal health index
+prenatal_care,numeric,Synthetic prenatal care access or quality index
+chronic_stress,numeric,Synthetic chronic stress burden
+toxic_exposure,numeric,Synthetic toxic exposure burden
+nutrition_support,numeric,Synthetic nutrition support index
+social_support,numeric,Synthetic social support index
+healthcare_access,numeric,Neighborhood-level healthcare access
+environmental_burden,numeric,Neighborhood-level environmental risk burden
+economic_security,numeric,Neighborhood-level economic security
+effective_care,numeric,Composite of prenatal care healthcare access and social support
+developmental_risk,numeric,Composite risk from stress toxic exposure environmental burden and insecurity
+early_outcome,numeric,Synthetic newborn or early infancy health-regulation score
+prenatal_profile,string,Profile grouping based on effective care and developmental risk
