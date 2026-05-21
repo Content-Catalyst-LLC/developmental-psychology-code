@@ -1,0 +1,18 @@
+variable,type,description
+child_id,integer,Unique synthetic individual identifier
+context_id,integer,Synthetic school family neighborhood or institutional context identifier
+time,integer,Repeated developmental observation wave
+baseline_functioning,numeric,Initial developmental functioning
+growth_rate,numeric,Continuous growth rate
+support_context,numeric,Baseline individual support context
+chronic_stress,integer,Binary chronic stress exposure indicator
+threshold_time,integer,Individual developmental transition threshold
+stage_pattern,integer,Indicator for synthetic stage-like reorganization pattern
+school_support,numeric,Context-level developmental support
+resource_stability,numeric,Context-level resource stability
+current_support,numeric,Time-varying support
+threshold_on,integer,Indicator that time has reached threshold_time
+logistic_transition,numeric,Smooth transition function around threshold_time
+transition_readiness,numeric,Composite support/resource/stress transition readiness
+development_score,numeric,Synthetic developmental outcome
+stage_profile,string,Profile grouping based on stage pattern and transition readiness
