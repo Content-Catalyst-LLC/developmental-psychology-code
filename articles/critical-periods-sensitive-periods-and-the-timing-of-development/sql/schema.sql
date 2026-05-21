@@ -1,23 +1,30 @@
--- Article-level synthetic developmental psychology schema.
+-- Schema for synthetic developmental timing-window panel data.
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+DROP TABLE IF EXISTS developmental_timing_panel;
+
+CREATE TABLE developmental_timing_panel (
+    person_id INTEGER NOT NULL,
+    context_id INTEGER NOT NULL,
+    time INTEGER NOT NULL,
+    experience REAL,
+    support REAL,
+    adversity REAL,
+    late_intervention REAL,
+    critical_weight REAL,
+    early_sensitive_weight REAL,
+    adolescent_sensitive_weight REAL,
+    residual_plasticity_weight REAL,
+    cumulative_critical_exposure REAL,
+    cumulative_sensitive_exposure REAL,
+    critical_outcome REAL,
+    sensitive_outcome REAL,
+    multi_window_outcome REAL,
+    recovery_outcome REAL,
+    PRIMARY KEY (person_id, time)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
+CREATE INDEX idx_timing_panel_context
+ON developmental_timing_panel (context_id);
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_timing_panel_time
+ON developmental_timing_panel (time);

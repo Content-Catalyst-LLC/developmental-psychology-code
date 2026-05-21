@@ -1,0 +1,18 @@
+variable,type,description
+person_id,integer,Unique synthetic person identifier
+context_id,integer,Synthetic context identifier
+time,integer,Developmental time step
+experience,numeric,General environmental input or exposure
+support,numeric,Positive developmental support
+adversity,numeric,Negative developmental exposure
+late_intervention,numeric,Later support or intervention input
+critical_weight,numeric,Binary weight for strict critical-period timing
+early_sensitive_weight,numeric,Smooth timing weight centered in early development
+adolescent_sensitive_weight,numeric,Smooth timing weight centered in adolescence
+residual_plasticity_weight,numeric,Later-life residual plasticity weight
+cumulative_critical_exposure,numeric,Cumulative critical-period weighted experience
+cumulative_sensitive_exposure,numeric,Cumulative sensitive-period weighted experience
+critical_outcome,numeric,Synthetic outcome under critical-period assumptions
+sensitive_outcome,numeric,Synthetic outcome under early sensitive-period assumptions
+multi_window_outcome,numeric,Synthetic outcome with early and adolescent sensitive periods
+recovery_outcome,numeric,Synthetic outcome with later intervention and residual plasticity
