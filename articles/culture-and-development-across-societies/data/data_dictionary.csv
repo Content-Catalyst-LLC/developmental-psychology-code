@@ -1,0 +1,19 @@
+variable,type,description
+child_id,integer,Unique synthetic child identifier
+society_id,integer,Synthetic cultural social or institutional context identifier
+time,integer,Repeated developmental observation wave
+family_orientation,numeric,Baseline family cultural orientation or home-context support
+institutional_fit,numeric,Baseline fit between home context and institutional setting
+cross_context_mismatch,numeric,Baseline tension between home and school or host setting
+social_support,numeric,Baseline social support
+bicultural_flexibility,numeric,Baseline flexibility navigating multiple cultural contexts
+society_climate,numeric,Context-level cultural-development climate
+institutional_inclusion,numeric,Context-level inclusion or recognition
+linguistic_support,numeric,Context-level language and multilingual support
+current_family,numeric,Time-varying family or home support
+current_fit,numeric,Time-varying institutional fit
+current_mismatch,numeric,Time-varying cross-context mismatch
+current_support,numeric,Time-varying social support
+current_flexibility,numeric,Time-varying bicultural flexibility
+development_score,numeric,Synthetic developmental outcome
+cultural_condition,string,Profile classification based on mismatch and support
