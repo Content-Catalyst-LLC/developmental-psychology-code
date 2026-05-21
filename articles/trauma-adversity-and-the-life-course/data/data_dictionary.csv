@@ -1,0 +1,24 @@
+variable,type,description
+child_id,integer,Unique synthetic child identifier
+context_id,integer,Synthetic context such as school neighborhood clinic or service ecology
+time,integer,Repeated developmental observation wave
+adversity_burden,numeric,Baseline adversity burden tendency
+caregiver_support,numeric,Baseline caregiver or relational support tendency
+contextual_stability,numeric,Baseline contextual stability tendency
+baseline_health,numeric,Baseline health-related condition
+child_resilience,numeric,Synthetic person-level adaptation tendency
+community_buffer,numeric,Context-level buffering capacity
+institutional_safety,numeric,Context-level trauma-informed institutional safety
+service_access,numeric,Context-level access to care or support services
+current_adversity,numeric,Time-varying adversity burden
+current_support,numeric,Time-varying caregiver or relational support
+current_stability,numeric,Time-varying contextual stability
+current_health,numeric,Time-varying health-related condition
+early_timing_weight,numeric,Weight for early developmental exposure
+transition_weight,numeric,Weight for transition or recovery window
+weighted_adversity,numeric,Current adversity multiplied by early timing weight
+transition_support,numeric,Current support multiplied by transition weight
+cumulative_adversity,numeric,Cumulative timing-weighted adversity
+cumulative_support,numeric,Cumulative support exposure
+adaptation_score,numeric,Synthetic adaptation outcome
+adversity_support_profile,string,Profile grouping based on average adversity and support

@@ -1,23 +1,39 @@
--- Article-level synthetic developmental psychology schema.
+-- Schema for synthetic trauma/adversity life-course panel data.
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+DROP TABLE IF EXISTS trauma_life_course_panel;
+
+CREATE TABLE trauma_life_course_panel (
+    child_id INTEGER NOT NULL,
+    context_id INTEGER NOT NULL,
+    time INTEGER NOT NULL,
+    adversity_burden REAL,
+    caregiver_support REAL,
+    contextual_stability REAL,
+    baseline_health REAL,
+    child_resilience REAL,
+    community_buffer REAL,
+    institutional_safety REAL,
+    service_access REAL,
+    current_adversity REAL,
+    current_support REAL,
+    current_stability REAL,
+    current_health REAL,
+    early_timing_weight REAL,
+    transition_weight REAL,
+    weighted_adversity REAL,
+    transition_support REAL,
+    cumulative_adversity REAL,
+    cumulative_support REAL,
+    adaptation_score REAL,
+    adversity_support_profile TEXT,
+    PRIMARY KEY (child_id, time)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
+CREATE INDEX idx_trauma_panel_context
+ON trauma_life_course_panel (context_id);
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
+CREATE INDEX idx_trauma_panel_time
+ON trauma_life_course_panel (time);
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_trauma_panel_profile
+ON trauma_life_course_panel (adversity_support_profile);
