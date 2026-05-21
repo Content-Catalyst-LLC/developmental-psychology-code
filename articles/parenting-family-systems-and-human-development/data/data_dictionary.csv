@@ -1,0 +1,21 @@
+variable,type,description
+child_id,integer,Unique synthetic child identifier
+household_id,integer,Synthetic household identifier
+time,integer,Repeated developmental observation wave
+parenting_responsiveness,numeric,Baseline parenting responsiveness tendency
+family_climate,numeric,Baseline family climate tendency
+external_stress,numeric,Baseline stress tendency
+sibling_support,numeric,Baseline sibling support tendency
+child_regulation,numeric,Baseline child regulation tendency
+caregiver_support,integer,Synthetic caregiver-support exposure indicator
+household_stability,numeric,Household-level stability
+kin_support,numeric,Household-level kin or extended support
+economic_security,numeric,Household-level economic security
+current_parenting,numeric,Time-varying parenting responsiveness
+current_family,numeric,Time-varying family climate
+current_stress,numeric,Time-varying external stress
+current_sibling,numeric,Time-varying sibling support
+current_regulation,numeric,Time-varying child regulation
+family_support_index,numeric,Synthetic family-support index
+development_score,numeric,Synthetic developmental outcome
+family_support_profile,string,Profile grouping based on average parenting and family climate
