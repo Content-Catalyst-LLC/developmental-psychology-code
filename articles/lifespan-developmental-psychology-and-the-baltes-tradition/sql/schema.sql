@@ -1,23 +1,29 @@
--- Article-level synthetic developmental psychology schema.
+DROP TABLE IF EXISTS lifespan_baltes_panel;
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+CREATE TABLE lifespan_baltes_panel (
+    id INTEGER NOT NULL,
+    cohort_id INTEGER NOT NULL,
+    time INTEGER NOT NULL,
+    baseline_dev REAL,
+    plasticity REAL,
+    context_support REAL,
+    comp_capacity REAL,
+    health_resource REAL,
+    historical_support REAL,
+    institutional_security REAL,
+    gains REAL,
+    losses REAL,
+    current_support REAL,
+    current_comp REAL,
+    selection REAL,
+    optimization REAL,
+    compensation REAL,
+    soc_index REAL,
+    development_score REAL,
+    adaptation_profile TEXT,
+    PRIMARY KEY (id, time)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_lifespan_cohort ON lifespan_baltes_panel (cohort_id);
+CREATE INDEX idx_lifespan_time ON lifespan_baltes_panel (time);
+CREATE INDEX idx_lifespan_profile ON lifespan_baltes_panel (adaptation_profile);

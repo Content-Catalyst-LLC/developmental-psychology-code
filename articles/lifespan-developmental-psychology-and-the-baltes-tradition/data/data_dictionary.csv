@@ -1,0 +1,21 @@
+variable,type,description
+id,integer,Unique synthetic person identifier
+cohort_id,integer,Synthetic cohort identifier
+time,integer,Repeated lifespan observation wave
+baseline_dev,numeric,Baseline developmental score
+plasticity,numeric,Synthetic plasticity or responsiveness to change
+context_support,numeric,Baseline contextual support tendency
+comp_capacity,numeric,Baseline compensatory capacity
+health_resource,numeric,Health resource or physical functioning support
+historical_support,numeric,Cohort-level historical support
+institutional_security,numeric,Cohort-level institutional security
+gains,numeric,Time-varying developmental gains
+losses,numeric,Time-varying developmental losses or constraints
+current_support,numeric,Time-varying contextual support
+current_comp,numeric,Time-varying compensation resource
+selection,numeric,SOC selection component
+optimization,numeric,SOC optimization component
+compensation,numeric,SOC compensation component
+soc_index,numeric,Selective optimization with compensation composite
+development_score,numeric,Synthetic developmental outcome
+adaptation_profile,string,Profile grouping based on support and loss balance
