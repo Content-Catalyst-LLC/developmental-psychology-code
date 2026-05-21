@@ -1,0 +1,21 @@
+variable,type,description
+id,integer,Unique synthetic older-adult identifier
+care_context_id,integer,Synthetic care/community context identifier
+time,integer,Repeated later-life observation wave
+baseline_adjustment,numeric,Baseline later-life adjustment orientation
+functional_ability,numeric,Baseline intrinsic functional ability
+social_support,numeric,Baseline social support tendency
+health_burden,numeric,Baseline health burden tendency
+adaptive_strategy,numeric,Baseline adaptive strategy tendency
+meaning_orientation,numeric,Baseline meaning or purpose orientation
+environmental_accessibility,numeric,Care-context environmental accessibility
+dignity_support,numeric,Care-context dignity support
+service_access,numeric,Care-context service access
+current_function,numeric,Time-varying functional ability
+current_support,numeric,Time-varying social support
+current_health,numeric,Time-varying health burden
+current_adaptation,numeric,Time-varying adaptive strategy
+current_meaning,numeric,Time-varying meaning orientation
+functional_fit,numeric,Synthetic person-environment fit index
+adjustment_score,numeric,Synthetic later-life developmental adjustment outcome
+adaptation_profile,string,Profile grouping based on function/support and health burden
