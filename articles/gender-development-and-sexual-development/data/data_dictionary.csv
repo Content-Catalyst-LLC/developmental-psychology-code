@@ -1,0 +1,22 @@
+variable,type,description
+id,integer,Unique synthetic adolescent identifier
+school_id,integer,Synthetic school or institutional context identifier
+time,integer,Repeated developmental observation wave
+baseline_adjustment,numeric,Baseline adolescent adjustment orientation
+family_support,numeric,Baseline family support tendency
+social_recognition,numeric,Baseline recognition or respect tendency
+consent_knowledge,numeric,Baseline consent and sexual-health knowledge
+school_connectedness,numeric,Baseline school connectedness
+chronic_stigma,integer,Binary persistent stigma-risk indicator
+school_climate,numeric,School-level climate and safety index
+health_education_quality,numeric,School-level health education quality
+anti_harassment_support,numeric,School-level anti-harassment support
+pubertal_progress,numeric,Time-varying pubertal progression
+current_family_support,numeric,Time-varying family support
+current_recognition,numeric,Time-varying social recognition
+current_consent_knowledge,numeric,Time-varying consent knowledge
+current_connectedness,numeric,Time-varying school connectedness
+current_stigma,numeric,Time-varying stigma exposure
+protective_context,numeric,Composite protective context index
+adjustment_score,numeric,Synthetic broad adolescent adjustment outcome
+development_profile,string,Profile grouping based on protective context and stigma

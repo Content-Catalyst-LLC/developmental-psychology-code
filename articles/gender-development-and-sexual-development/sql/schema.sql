@@ -1,23 +1,31 @@
--- Article-level synthetic developmental psychology schema.
+DROP TABLE IF EXISTS gender_sexual_development_panel;
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+CREATE TABLE gender_sexual_development_panel (
+    id INTEGER NOT NULL,
+    school_id INTEGER NOT NULL,
+    time INTEGER NOT NULL,
+    baseline_adjustment REAL,
+    family_support REAL,
+    social_recognition REAL,
+    consent_knowledge REAL,
+    school_connectedness REAL,
+    chronic_stigma INTEGER,
+    school_climate REAL,
+    health_education_quality REAL,
+    anti_harassment_support REAL,
+    pubertal_progress REAL,
+    current_family_support REAL,
+    current_recognition REAL,
+    current_consent_knowledge REAL,
+    current_connectedness REAL,
+    current_stigma REAL,
+    protective_context REAL,
+    adjustment_score REAL,
+    development_profile TEXT,
+    PRIMARY KEY (id, time)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_gender_sexual_school ON gender_sexual_development_panel (school_id);
+CREATE INDEX idx_gender_sexual_time ON gender_sexual_development_panel (time);
+CREATE INDEX idx_gender_sexual_profile ON gender_sexual_development_panel (development_profile);
+CREATE INDEX idx_gender_sexual_stigma ON gender_sexual_development_panel (chronic_stigma);
