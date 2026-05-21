@@ -1,0 +1,15 @@
+variable,type,description
+person_id,integer,Unique synthetic person identifier
+context_id,integer,Context identifier such as a school neighborhood clinic or service environment
+time,integer,Repeated observation wave
+baseline_support,numeric,Person-level baseline support tendency
+baseline_risk,numeric,Person-level baseline risk burden
+baseline_policy_access,numeric,Person-level baseline access to services or institutional support
+baseline_health,numeric,Person-level baseline health condition
+institutional_climate,numeric,Context-level relational and institutional quality
+resource_level,numeric,Context-level resource condition
+current_support,numeric,Time-varying developmental support
+current_risk,numeric,Time-varying developmental risk
+policy_access,numeric,Time-varying access to policy service or institutional support
+health_status,numeric,Time-varying health-related condition
+development_score,numeric,Synthetic developmental outcome score
