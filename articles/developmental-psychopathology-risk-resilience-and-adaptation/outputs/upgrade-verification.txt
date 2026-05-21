@@ -1,0 +1,4 @@
+upgrade_verification_timestamp_utc=2026-05-21T17:52:37Z
+repo=Content-Catalyst-LLC/developmental-psychology-code
+branch=main
+article=developmental-psychopathology-risk-resilience-and-adaptation
