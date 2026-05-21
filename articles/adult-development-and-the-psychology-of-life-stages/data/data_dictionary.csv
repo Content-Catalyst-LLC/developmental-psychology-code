@@ -1,0 +1,23 @@
+variable,type,description
+id,integer,Unique synthetic adult identifier
+context_id,integer,Synthetic household/workplace/community/care-context identifier
+time,integer,Repeated adult-development observation wave
+baseline_adjustment,numeric,Baseline adult adjustment orientation
+life_stage,string,Young adulthood midlife or later adulthood
+relational_support,numeric,Baseline relational support tendency
+work_integration,numeric,Baseline work or institutional integration
+health_burden,numeric,Baseline health burden tendency
+adaptive_resources,numeric,Baseline adaptive resource tendency
+role_burden,numeric,Baseline role burden tendency
+institutional_support,numeric,Context-level institutional support
+community_stability,numeric,Context-level community stability
+current_relational_support,numeric,Time-varying relational support
+current_work_integration,numeric,Time-varying work integration
+current_health_burden,numeric,Time-varying health burden
+current_adaptive_resources,numeric,Time-varying adaptive resources
+current_role_burden,numeric,Time-varying role burden
+young_stage,integer,Indicator for young adulthood
+midlife_stage,integer,Indicator for midlife
+later_stage,integer,Indicator for later adulthood
+adjustment_score,numeric,Synthetic adult developmental adjustment outcome
+adult_development_profile,string,Profile grouping based on support and burden
