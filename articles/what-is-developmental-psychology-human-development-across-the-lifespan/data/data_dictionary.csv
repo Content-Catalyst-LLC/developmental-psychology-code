@@ -1,0 +1,21 @@
+variable,type,description
+child_id,integer,Unique synthetic child/adolescent identifier
+school_id,integer,Synthetic school or developmental institution identifier
+time,integer,Repeated observation wave
+baseline_regulation,numeric,Initial synthetic developmental regulation score
+caregiver_support,numeric,Baseline caregiver support
+family_support,numeric,Baseline broader family support
+school_support,numeric,Baseline school support
+disability_support_need,integer,Binary synthetic support-need indicator
+structural_risk,integer,Binary synthetic structural risk exposure
+school_climate,numeric,School-level climate
+disability_accommodation,numeric,School-level disability support/accommodation
+counseling_access,numeric,School-level counseling/access support
+language_access,numeric,School-level language access support
+community_resource_index,numeric,School/community resource context
+acute_stress,numeric,Time-varying stress exposure
+current_support,numeric,Time-varying support context
+intervention,integer,Time-varying intervention exposure
+protective_context,numeric,Composite support and resource context
+development_score,numeric,Synthetic developmental outcome
+development_profile,string,Profile by risk and protective context
