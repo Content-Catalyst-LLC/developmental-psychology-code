@@ -1,0 +1,23 @@
+variable,type,description
+child_id,integer,Unique synthetic child/adolescent identifier
+school_id,integer,Synthetic school or regulation-development context identifier
+time,integer,Repeated observation wave
+baseline_ef,numeric,Initial synthetic executive-function score
+caregiving_support,numeric,Baseline caregiving support
+classroom_structure,numeric,Baseline classroom structure support
+sleep_quality,numeric,Baseline sleep quality
+chronic_stress,integer,Binary synthetic chronic stress indicator
+temperament_reactivity,numeric,Baseline reactivity/sensitivity
+disability_support_need,integer,Binary synthetic disability support need indicator
+school_climate,numeric,School-level climate
+regulation_scaffolding,numeric,School-level regulation scaffolding
+disability_accommodation,numeric,School-level disability accommodation
+transition_predictability,numeric,School-level predictability of transitions
+current_support,numeric,Time-varying caregiving support
+current_structure,numeric,Time-varying classroom structure
+current_sleep,numeric,Time-varying sleep quality
+acute_stress,numeric,Time-varying acute stress
+intervention_exposure,integer,Time-varying support or intervention exposure
+regulatory_support_context,numeric,Composite regulatory support context
+regulation_score,numeric,Synthetic self-regulation/executive-function outcome
+regulation_profile,string,Profile by stress and support context
