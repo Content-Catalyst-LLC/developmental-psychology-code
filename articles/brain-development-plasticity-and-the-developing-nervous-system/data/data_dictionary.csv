@@ -1,0 +1,23 @@
+variable,type,description
+child_id,integer,Unique synthetic child identifier
+context_id,integer,Synthetic developmental ecology context identifier
+time,integer,Repeated observation wave
+baseline_neural_state,numeric,Initial broad neural-development state
+family_support,numeric,Baseline family or caregiving support
+learning_context,numeric,Baseline learning opportunity
+sleep_quality,numeric,Baseline sleep quality
+sensory_regulation_support,numeric,Baseline sensory regulation support
+chronic_stress,integer,Binary chronic stress indicator
+school_support,numeric,Context-level school support
+neighborhood_safety,numeric,Context-level neighborhood safety
+health_service_access,numeric,Context-level health-service access
+environmental_risk,numeric,Context-level environmental risk
+current_family_support,numeric,Time-varying family support
+current_learning,numeric,Time-varying learning opportunity
+current_sleep,numeric,Time-varying sleep quality
+current_sensory_support,numeric,Time-varying sensory support
+acute_stress,numeric,Time-varying acute stress
+developmental_support_context,numeric,Composite developmental support context
+neural_state,numeric,Synthetic neural-development state
+developmental_outcome,numeric,Synthetic developmental outcome
+neurodevelopment_profile,string,Profile by stress support risk and developmental context

@@ -1,23 +1,32 @@
--- Article-level synthetic developmental psychology schema.
+DROP TABLE IF EXISTS brain_development_panel;
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+CREATE TABLE brain_development_panel (
+    child_id INTEGER NOT NULL,
+    context_id INTEGER NOT NULL,
+    time INTEGER NOT NULL,
+    baseline_neural_state REAL,
+    family_support REAL,
+    learning_context REAL,
+    sleep_quality REAL,
+    sensory_regulation_support REAL,
+    chronic_stress INTEGER,
+    school_support REAL,
+    neighborhood_safety REAL,
+    health_service_access REAL,
+    environmental_risk REAL,
+    current_family_support REAL,
+    current_learning REAL,
+    current_sleep REAL,
+    current_sensory_support REAL,
+    acute_stress REAL,
+    developmental_support_context REAL,
+    neural_state REAL,
+    developmental_outcome REAL,
+    neurodevelopment_profile TEXT,
+    PRIMARY KEY (child_id, time)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_brain_context ON brain_development_panel (context_id);
+CREATE INDEX idx_brain_time ON brain_development_panel (time);
+CREATE INDEX idx_brain_profile ON brain_development_panel (neurodevelopment_profile);
+CREATE INDEX idx_brain_stress ON brain_development_panel (chronic_stress);
