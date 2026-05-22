@@ -1,0 +1,25 @@
+variable,type,description
+child_id,integer,Unique synthetic child/adolescent identifier
+school_id,integer,Synthetic school or social-development context identifier
+time,integer,Repeated observation wave
+baseline_social,numeric,Initial synthetic social-self score
+peer_support_base,numeric,Baseline peer support
+friendship_quality_base,numeric,Baseline friendship quality
+family_support_base,numeric,Baseline family support
+social_interpretation_skill,numeric,Baseline social interpretation skill
+chronic_exclusion,integer,Binary synthetic chronic exclusion indicator
+school_connectedness,numeric,School-level connectedness
+teacher_support,numeric,School-level teacher support
+anti_bullying_climate,numeric,School-level anti-bullying climate
+inclusion_climate,numeric,School-level inclusion climate
+restorative_practice_access,numeric,School-level restorative practice access
+current_peer_support,numeric,Time-varying peer support
+current_friendship_quality,numeric,Time-varying friendship quality
+current_family_support,numeric,Time-varying family support
+current_social_interpretation,numeric,Time-varying social interpretation
+current_exclusion,numeric,Time-varying exclusion or rejection
+bullying_exposure,numeric,Time-varying bullying exposure
+digital_comparison_stress,numeric,Time-varying digital comparison stress
+social_support_context,numeric,Composite social support context
+social_self_score,numeric,Synthetic social-self developmental outcome
+social_profile,string,Profile by exclusion and social support context
