@@ -1,0 +1,24 @@
+variable,type,description
+child_id,integer,Unique synthetic child identifier
+context_id,integer,Synthetic language ecology context identifier
+time,integer,Repeated observation wave
+baseline_language,numeric,Initial broad language score
+responsive_interaction,numeric,Baseline responsive interaction
+shared_reading,numeric,Baseline shared reading
+joint_attention,numeric,Baseline joint attention
+conversational_turns,numeric,Baseline conversational turn-taking
+hearing_support,numeric,Hearing or communication-access support
+multilingual_exposure,integer,Binary multilingual exposure indicator
+chronic_stress,integer,Binary chronic stress indicator
+language_ecology_support,numeric,Context-level language ecology support
+book_access,numeric,Context-level book or text access
+early_education_quality,numeric,Context-level early education quality
+home_language_recognition,numeric,Context-level home-language recognition
+current_interaction,numeric,Time-varying responsive interaction
+current_reading,numeric,Time-varying shared reading
+current_joint_attention,numeric,Time-varying joint attention
+current_turn_taking,numeric,Time-varying conversational turn-taking
+current_stress,numeric,Time-varying acute stress
+language_support_context,numeric,Composite language support context
+language_score,numeric,Synthetic language-development outcome
+language_profile,string,Profile by stress and language support context

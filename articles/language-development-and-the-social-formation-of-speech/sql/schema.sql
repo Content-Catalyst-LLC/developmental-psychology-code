@@ -1,23 +1,34 @@
--- Article-level synthetic developmental psychology schema.
+DROP TABLE IF EXISTS language_development_panel;
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+CREATE TABLE language_development_panel (
+    child_id INTEGER NOT NULL,
+    context_id INTEGER NOT NULL,
+    time INTEGER NOT NULL,
+    baseline_language REAL,
+    responsive_interaction REAL,
+    shared_reading REAL,
+    joint_attention REAL,
+    conversational_turns REAL,
+    hearing_support REAL,
+    multilingual_exposure INTEGER,
+    chronic_stress INTEGER,
+    language_ecology_support REAL,
+    book_access REAL,
+    early_education_quality REAL,
+    home_language_recognition REAL,
+    current_interaction REAL,
+    current_reading REAL,
+    current_joint_attention REAL,
+    current_turn_taking REAL,
+    current_stress REAL,
+    language_support_context REAL,
+    language_score REAL,
+    language_profile TEXT,
+    PRIMARY KEY (child_id, time)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_language_context ON language_development_panel (context_id);
+CREATE INDEX idx_language_time ON language_development_panel (time);
+CREATE INDEX idx_language_profile ON language_development_panel (language_profile);
+CREATE INDEX idx_language_stress ON language_development_panel (chronic_stress);
+CREATE INDEX idx_language_multilingual ON language_development_panel (multilingual_exposure);
