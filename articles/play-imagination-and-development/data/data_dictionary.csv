@@ -1,0 +1,27 @@
+variable,type,description
+child_id,integer,Unique synthetic child identifier
+context_id,integer,Synthetic play ecology context identifier
+time,integer,Repeated observation wave
+baseline_development,numeric,Initial broad developmental score
+pretend_play_base,numeric,Baseline pretend/symbolic play tendency
+social_play_base,numeric,Baseline social play tendency
+constructive_play_base,numeric,Baseline constructive/material play tendency
+outdoor_play_base,numeric,Baseline outdoor/embodied play tendency
+caregiver_support_base,numeric,Baseline caregiver support
+chronic_stress,integer,Binary chronic stress indicator
+play_space_quality,numeric,Context-level quality of play space
+adult_responsiveness,numeric,Context-level adult responsiveness
+inclusion_climate,numeric,Context-level inclusion climate
+outdoor_safety,numeric,Context-level outdoor safety
+play_material_access,numeric,Context-level access to play materials
+current_pretend,numeric,Time-varying pretend play
+current_social_play,numeric,Time-varying social play
+current_constructive,numeric,Time-varying constructive play
+current_outdoor,numeric,Time-varying outdoor play
+current_support,numeric,Time-varying caregiver support
+current_stress,numeric,Time-varying acute stress
+play_restriction,numeric,Time-varying play restriction
+peer_inclusion,numeric,Time-varying peer inclusion
+play_support_context,numeric,Composite support context for play
+development_score,numeric,Synthetic developmental outcome
+play_profile,string,Profile by stress and play support context
