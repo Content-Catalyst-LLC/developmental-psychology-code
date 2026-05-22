@@ -1,0 +1,29 @@
+variable,type,description
+child_id,integer,Unique synthetic child/adolescent identifier
+school_id,integer,Synthetic school or moral-development context identifier
+time,integer,Repeated observation wave
+baseline_morality,numeric,Initial synthetic moral responsiveness score
+caregiving_guidance,numeric,Baseline caregiving moral guidance
+empathic_sensitivity,numeric,Baseline empathic sensitivity
+peer_fairness_base,numeric,Baseline peer fairness experience
+self_regulation,numeric,Baseline self-regulation
+harm_recognition_base,numeric,Baseline harm-recognition tendency
+chronic_exclusion,integer,Binary synthetic chronic exclusion indicator
+school_moral_climate,numeric,School-level moral climate
+restorative_practice_access,numeric,School-level restorative practice access
+punitive_inconsistency,numeric,School-level punitive inconsistency
+anti_bullying_climate,numeric,School-level anti-bullying climate
+digital_moral_safety,numeric,Digital moral safety/support climate
+current_guidance,numeric,Time-varying caregiving guidance
+current_empathy,numeric,Time-varying empathic response
+current_peer_fairness,numeric,Time-varying peer fairness
+current_self_regulation,numeric,Time-varying self-regulation
+current_harm_recognition,numeric,Time-varying harm recognition
+current_repair_opportunity,numeric,Time-varying repair opportunity
+current_exclusion,numeric,Time-varying exclusion or humiliation
+digital_cruelty_exposure,numeric,Time-varying digital cruelty or bystander exposure
+peer_pressure,numeric,Time-varying peer/status pressure
+moral_support_context,numeric,Composite moral support context
+conscience_score,numeric,Synthetic conscience development outcome
+moral_action_score,numeric,Synthetic moral action under pressure outcome
+moral_profile,string,Profile by exclusion and moral support context
