@@ -1,23 +1,31 @@
--- Article-level synthetic developmental psychology schema.
+DROP TABLE IF EXISTS attachment_development_panel;
 
-CREATE TABLE IF NOT EXISTS developmental_observations (
-    observation_id INTEGER PRIMARY KEY,
-    participant_id TEXT NOT NULL,
-    wave INTEGER NOT NULL,
-    age_years REAL,
-    caregiving_support REAL,
-    educational_opportunity REAL,
-    self_regulation REAL,
-    resilience_support REAL,
-    cumulative_risk REAL,
-    developmental_functioning REAL
+CREATE TABLE attachment_development_panel (
+    child_id INTEGER NOT NULL,
+    context_id INTEGER NOT NULL,
+    time INTEGER NOT NULL,
+    baseline_regulation REAL,
+    caregiving_quality REAL,
+    repair_capacity REAL,
+    caregiver_support REAL,
+    temperament_reactivity REAL,
+    disability_support_need INTEGER,
+    chronic_stress INTEGER,
+    childcare_continuity REAL,
+    neighborhood_safety REAL,
+    family_service_access REAL,
+    caregiving_ecology_support REAL,
+    current_care REAL,
+    current_repair REAL,
+    current_caregiver_support REAL,
+    current_stress REAL,
+    caregiving_support_context REAL,
+    regulation_score REAL,
+    attachment_profile TEXT,
+    PRIMARY KEY (child_id, time)
 );
 
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_participant
-ON developmental_observations(participant_id);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_wave
-ON developmental_observations(wave);
-
-CREATE INDEX IF NOT EXISTS idx_developmental_observations_age
-ON developmental_observations(age_years);
+CREATE INDEX idx_attachment_context ON attachment_development_panel (context_id);
+CREATE INDEX idx_attachment_time ON attachment_development_panel (time);
+CREATE INDEX idx_attachment_profile ON attachment_development_panel (attachment_profile);
+CREATE INDEX idx_attachment_stress ON attachment_development_panel (chronic_stress);

@@ -1,0 +1,22 @@
+variable,type,description
+child_id,integer,Unique synthetic child identifier
+context_id,integer,Synthetic caregiving ecology context identifier
+time,integer,Repeated observation wave
+baseline_regulation,numeric,Initial broad emotional-regulation score
+caregiving_quality,numeric,Baseline caregiving responsiveness
+repair_capacity,numeric,Baseline relational repair/co-regulation capacity
+caregiver_support,numeric,Baseline caregiver support
+temperament_reactivity,numeric,Baseline temperament reactivity or sensitivity
+disability_support_need,integer,Binary disability support need indicator
+chronic_stress,integer,Binary chronic stress indicator
+childcare_continuity,numeric,Context-level childcare continuity
+neighborhood_safety,numeric,Context-level safety
+family_service_access,numeric,Context-level family service access
+caregiving_ecology_support,numeric,Context-level caregiving ecology support
+current_care,numeric,Time-varying caregiving responsiveness
+current_repair,numeric,Time-varying relational repair
+current_caregiver_support,numeric,Time-varying caregiver support
+current_stress,numeric,Time-varying acute stress
+caregiving_support_context,numeric,Composite caregiving support context
+regulation_score,numeric,Synthetic early emotional-development outcome
+attachment_profile,string,Profile by stress and caregiving support context
