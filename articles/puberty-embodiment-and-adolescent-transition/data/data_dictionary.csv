@@ -1,0 +1,26 @@
+variable,type,description
+adolescent_id,integer,Unique synthetic adolescent identifier
+school_id,integer,Synthetic school or institutional context identifier
+time,integer,Repeated developmental observation wave
+baseline_adjustment,numeric,Initial synthetic embodiment-adjustment score
+timing_deviation,numeric,Relative pubertal timing compared with peers
+family_support_base,numeric,Baseline family-support tendency
+peer_comparison_base,numeric,Baseline peer-comparison tendency
+body_image_vulnerability,numeric,Baseline body-image vulnerability
+chronic_stigma,integer,Binary chronic stigma or harassment-risk indicator
+school_support,numeric,School-level support for adolescent well-being
+health_education_quality,numeric,School-level quality of puberty and health education
+privacy_protection,numeric,School-level bodily privacy protections
+menstrual_support,numeric,School-level menstrual product/pain/privacy support
+disability_accommodation,numeric,School-level disability and neurodivergence accommodation
+anti_harassment_climate,numeric,School-level anti-harassment climate
+digital_safety,numeric,Digital safety/support climate
+pubertal_progress,numeric,Time-varying pubertal progression index
+current_family_support,numeric,Time-varying family support
+current_peer_comparison,numeric,Time-varying peer comparison
+current_body_concern,numeric,Time-varying body concern
+current_stigma,numeric,Time-varying stigma, shame, or harassment
+digital_visibility_stress,numeric,Time-varying digital visibility/comparison stress
+protective_context,numeric,Composite support context
+adjustment_score,numeric,Synthetic embodiment-adjustment outcome
+puberty_profile,string,Profile by stigma risk, timing, and protective context
